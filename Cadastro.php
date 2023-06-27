@@ -5,8 +5,8 @@
     $dbname = "cadastros";
 
     // Cria uma conexão com o banco de dados
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
+    //$conn = new mysqli($servername, $username, $password, $dbname);
+    $pdo = new PDO("mysql:host=$servername;dbname=$cadastros;charset=utf8", $username, $password);
     // Obtém os valores do formulário
     $nome = $_POST['nome'];
     $email = $_POST['email'];
